@@ -1,0 +1,84 @@
+{
+  "generator": {
+
+    "first_name": {
+      "male_name": [
+        "Andriy",
+        "Oleksandr",
+        "Volodymyr",
+        "Serhiy",
+        "Vitaliy",
+        "Mykola",
+        "Pavlo",
+        "Yuriy",
+        "Ivan",
+        "Oleksiy",
+        "Roman",
+        "Dmytro",
+        "Denys",
+        "Artem",
+        "Oleh",
+        "Taras",
+        "Vasyl",
+        "Yaroslav",
+        "Maksym",
+        "Bohdan"
+      ],
+      "female_name": [
+        "Anastasiya",
+        "Viktoriya",
+        "Yuliya",
+        "Valeriya",
+        "Olena",
+        "Nataliya",
+        "Iryna",
+        "Kateryna",
+        "Anna",
+        "Mariya",
+        "Dariya",
+        "Tetiana",
+        "Alina",
+        "Oksana",
+        "Yana",
+        "Svitlana",
+        "Olha",
+        "Ivanna",
+        "Yelyzaveta",
+        "Karina"
+      ]
+    },
+
+
+    "last_name": {
+      "male_last_name":  [
+        "Kovalenko",
+        "Pavlenko",
+        "Melnyk",
+        "Shevchenko",
+        "Bondarenko",
+        "Tkachenko",
+        "Kravchenko",
+        "Oliynyk",
+        "Lysenko",
+        "Mykhailenko"
+      ],
+      "female_last_name": [
+        "Kovalenko",
+        "Pavlenko",
+        "Melnyk",
+        "Shevchenko",
+        "Bondarenko",
+        "Tkachenko",
+        "Kravchenko",
+        "Oliynyk",
+        "Lysenko",
+        "Mykhailenko"
+      ]
+    }
+
+
+
+
+
+  }
+}

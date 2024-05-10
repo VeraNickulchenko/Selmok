@@ -1,0 +1,88 @@
+{
+  "generator": {
+
+    "first_name": {
+
+      "female_first_name": [
+        "Emma",
+        "Olivia",
+        "Ava",
+        "Isabella",
+        "Sophia",
+        "Mia",
+        "Charlotte",
+        "Amelia",
+        "Harper",
+        "Evelyn",
+        "Abigail",
+        "Emily",
+        "Elizabeth",
+        "Mila",
+        "Ella",
+        "Avery",
+        "Sofia",
+        "Camila",
+        "Aria",
+        "Scarlett",
+        "Victoria",
+        "Madison",
+        "Luna",
+        "Grace",
+        "Chloe"
+      ],
+
+      "male_first_name": [
+        "Liam",
+        "Noah",
+        "Oliver",
+        "Elijah",
+        "William",
+        "James",
+        "Benjamin",
+        "Lucas",
+        "Henry",
+        "Alexander",
+        "Mason",
+        "Michael",
+        "Ethan",
+        "Daniel",
+        "Jacob",
+        "Logan",
+        "Jackson",
+        "Sebastian",
+        "Jack",
+        "Aiden",
+        "Owen",
+        "Samuel",
+        "Matthew",
+        "Joseph",
+        "Levi"
+      ]
+    },
+
+    "last_name": {
+      "common_last_name": [
+                "Smith",
+                "Johnson",
+                "Williams",
+                "Brown",
+                "Jones",
+                "Garcia",
+                "Miller",
+                "Davis",
+                "Rodriguez",
+                "Martinez",
+                "Hernandez",
+                "Lopez",
+                "Gonzalez",
+                "Wilson",
+                "Anderson",
+                "Thomas",
+                "Taylor",
+                "Moore",
+                "Jackson",
+                "Martin"
+     ]
+    }
+  }
+}
