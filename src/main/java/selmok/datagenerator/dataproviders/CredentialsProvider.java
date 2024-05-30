@@ -21,7 +21,7 @@ public class CredentialsProvider extends BaseProvider{
      * @return A new EmailProvider instance.
      */
     public EmailProvider email(){
-        return new EmailProvider(getLocale(), getRandom());
+        return new EmailProvider(getLocale().getLocale().getCountry(), getRandom());
     }
 
     /**

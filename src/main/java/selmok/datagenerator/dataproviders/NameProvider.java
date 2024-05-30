@@ -2,8 +2,8 @@ package selmok.datagenerator.dataproviders;
 
 import selmok.datagenerator.customizers.SingletonLocaleContext;
 import selmok.datagenerator.services.RandomService;
-import selmok.datagenerator.utils.error_message_adjustments.ExceptionsHandlerUtils;
-import selmok.datagenerator.utils.requests_resolvers.RequestExecutor;
+import selmok.datagenerator.utils.message_customizers.ExceptionsHandlerUtils;
+import selmok.datagenerator.utils.requests_handler.RequestExecutor;
 import org.apache.logging.log4j.Level;
 
 import java.io.IOException;

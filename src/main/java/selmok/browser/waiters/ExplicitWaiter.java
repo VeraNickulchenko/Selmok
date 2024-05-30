@@ -1,4 +1,4 @@
-package selmok.webdriver_wrapper.waiters;
+package selmok.browser.waiters;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;

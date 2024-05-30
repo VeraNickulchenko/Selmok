@@ -1,4 +1,4 @@
-package selmok.datagenerator.utils.requests_resolvers;
+package selmok.datagenerator.utils.requests_handler;
 
 import selmok.datagenerator.customizers.SingletonLocaleContext;
 
@@ -17,7 +17,7 @@ import java.util.List;
 public class RequestResolver {
 
     private static final String REQUEST_SEPARATOR_PATTERN = "[()]";
-    private static final String ROOT_DIR = "src//main//resources//";
+    private static final String ROOT_DIR = "src//main//resources//faker_date//";
 
     /**
      * Uses specifically defined separators to get the part of file name
@@ -75,9 +75,9 @@ public class RequestResolver {
     public static String getFilePathFromRequest(SingletonLocaleContext localeContext, String request){
         String fileContext = getFileContextFromRequest(request);
 
-        return ROOT_DIR + localeContext.getLocale().getLanguage() + "//"
+        return ROOT_DIR + localeContext.getLocale().getLanguageCode() + "//"
                 + fileContext + "//"
-                + localeContext.getLocale().getCountry() + "_"
+                + localeContext.getLocale().getCountryCode() + "_"
                 + fileContext+ ".json";
 
     }

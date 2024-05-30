@@ -203,11 +203,11 @@ public class RandomService {
                 resData.insert(0, SPECIAL_CHARS_SRC_STRING.charAt(rand.nextInt(SPECIAL_CHARS_SRC_STRING.length())));
             }
 
-            if(i==length/2 && upperLetters){
+            else if(i==length/2 && upperLetters){
                 resData.insert(length/2, CHAR_UPPER_SRC_STRING.charAt(rand.nextInt(CHAR_UPPER_SRC_STRING.length())));
             }
 
-            if(i==length-1 && numbers){
+            else if(i==length-1 && numbers){
                 resData.insert(length-1, NUMBER_SRC_STRING.charAt(rand.nextInt(NUMBER_SRC_STRING.length())));
             }
 

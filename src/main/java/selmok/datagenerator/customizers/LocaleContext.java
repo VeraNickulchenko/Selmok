@@ -2,7 +2,7 @@ package selmok.datagenerator.customizers;
 
 import selmok.datagenerator.enums.Countries;
 import selmok.datagenerator.enums.Languages;
-import selmok.datagenerator.utils.error_message_adjustments.ExceptionsHandlerUtils;
+import selmok.datagenerator.utils.message_customizers.ExceptionsHandlerUtils;
 
 import java.util.Objects;
 
@@ -69,7 +69,7 @@ public class LocaleContext {
      *
      * @return String
      */
-    public String getCountry() {return country.getCountryCode();}
+    public String getCountryCode() {return country.getCountryCode();}
 
     /**
      * Returns String representation of
@@ -77,8 +77,12 @@ public class LocaleContext {
      *
      * @return String
      */
-    public String getLanguage() {
+    public String getLanguageCode() {
         return language.getLanguageCode();
+    }
+
+    public Countries getCountry() {
+        return country;
     }
 
     /**
@@ -90,7 +94,7 @@ public class LocaleContext {
      */
     @Override
     public String toString() {
-        return getCountry().toLowerCase() + "_" + getLanguage().toLowerCase();
+        return getCountryCode().toLowerCase() + "_" + getLanguageCode().toLowerCase();
     }
 
     /**
@@ -112,7 +116,7 @@ public class LocaleContext {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         LocaleContext that = (LocaleContext) o;
-        return getCountry() == that.getCountry() && getLanguage() == that.getLanguage();
+        return getCountryCode() == that.getCountryCode() && getLanguageCode() == that.getLanguageCode();
     }
 
     /**
@@ -124,7 +128,15 @@ public class LocaleContext {
      */
     @Override
     public int hashCode() {
-        return Objects.hash(getCountry(), getLanguage());
+        return Objects.hash(getCountryCode(), getLanguageCode());
+    }
+
+    public void setCountry(Countries country) {
+        this.country = country;
+    }
+
+    public void setLanguage(Languages language) {
+        this.language = language;
     }
 
     /**
@@ -184,5 +196,7 @@ public class LocaleContext {
                     "no support for its native country added yet");
         }
     }
+
+
 
 }

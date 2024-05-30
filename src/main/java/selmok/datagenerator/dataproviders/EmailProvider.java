@@ -1,6 +1,9 @@
 package selmok.datagenerator.dataproviders;
 
+import selmok.datagenerator.customizers.LocaleContext;
 import selmok.datagenerator.customizers.SingletonLocaleContext;
+import selmok.datagenerator.enums.Countries;
+import selmok.datagenerator.enums.Languages;
 import selmok.datagenerator.services.RandomService;
 
 /**
@@ -13,6 +16,10 @@ public class EmailProvider extends BaseProvider{
 
     private NameProvider name;
 
+    public static SingletonLocaleContext constructEmailLocaleContext(Countries country){
+        return SingletonLocaleContext.get(new LocaleContext(country, Languages.ENGLISH));
+    }
+
     /**
      * Using the BaseProvider.class constructor, initializes the instance of EmailProvider
      * with SingletonLocaleContext to define country and language for which data will be generated
@@ -20,10 +27,9 @@ public class EmailProvider extends BaseProvider{
      * Apart from that, initializes the NameProvider instance to generate emails with full names as
      * local part.
      */
-    public EmailProvider(SingletonLocaleContext locale, RandomService random) {
-
-        super(locale, random);
-        this.name = new NameProvider(getLocale(), getRandom());
+    public EmailProvider(Countries country, RandomService random) {
+        super(constructEmailLocaleContext(country), random);
+        this.name = new NameProvider(constructEmailLocaleContext(country), random);
     }
 
     /**
@@ -59,7 +65,8 @@ public class EmailProvider extends BaseProvider{
      */
     public String getEmailLocalePartAsFullName(String nameSeparator){
         String fullName = name.fullName();
-        return fullName.replace(" ", nameSeparator);
+        String[] splittedStr = fullName.split(" ");
+        return splittedStr[0] + nameSeparator + splittedStr[1];
     }
 
     /**

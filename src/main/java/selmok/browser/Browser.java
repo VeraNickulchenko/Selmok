@@ -1,9 +1,9 @@
-package selmok.webdriver_wrapper;
+package selmok.browser;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import selmok.webdriver_wrapper.actions.UserAction;
-import selmok.webdriver_wrapper.waiters.Waiter;
+import selmok.browser.actions.UserAction;
+import selmok.browser.waiters.Waiter;
 
 public class Browser {
 

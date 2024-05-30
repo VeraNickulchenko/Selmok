@@ -1,4 +1,4 @@
-package selmok.datagenerator.utils.requests_resolvers;
+package selmok.datagenerator.utils.requests_handler;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import selmok.datagenerator.customizers.SingletonLocaleContext;

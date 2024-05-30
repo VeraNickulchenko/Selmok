@@ -15,7 +15,7 @@ import java.util.Random;
  * classes and returns reference to them to access their methods easily, with no need to initialize
  * each and every provider separately in code, but at the same time does not limit to do it.
  */
-public class DataGenerator {
+public class Generator {
     private SingletonLocaleContext locale;
     private RandomService randomService;
 
@@ -29,7 +29,7 @@ public class DataGenerator {
      * Apart from that, it initializes the RandomService with specific Random object, used to control
      * the data generation (provide random seed, etc).
      */
-    public DataGenerator(LocaleContext localeContext, Random random) {
+    public Generator(LocaleContext localeContext, Random random) {
         this.locale = SingletonLocaleContext.get(localeContext);
         this.randomService = new RandomService(random);
 
@@ -45,7 +45,7 @@ public class DataGenerator {
      * The instance of Random.class, used to control and generate the data, is the default one
      * (means that default constructor of Random class is used for initialization).
      */
-    public DataGenerator(LocaleContext locale){
+    public Generator(LocaleContext locale){
         this.locale = SingletonLocaleContext.get(locale);
         this.randomService = new RandomService();
     }
@@ -61,12 +61,12 @@ public class DataGenerator {
      * Apart from that, it initializes the RandomService with specific Random object, used to control
      * the data generation (provide random seed, etc).
      */
-    public DataGenerator(Random random){
+    public Generator(Random random){
         this.locale = SingletonLocaleContext.get(new LocaleContext());
         this.randomService = new RandomService(random);
     }
 
-    public DataGenerator(){
+    public Generator(){
         this.locale = SingletonLocaleContext.get(new LocaleContext());
         this.randomService = new RandomService();
     }
@@ -92,7 +92,7 @@ public class DataGenerator {
      * full emails). Refer to EmailProvider class for more information about possible methods.
      */
     public EmailProvider email(){
-        return new EmailProvider(locale, randomService);
+        return new EmailProvider(locale.getLocale().getCountry(), randomService);
     }
 
     /**
@@ -105,5 +105,11 @@ public class DataGenerator {
         return randomService;
     }
 
+    public void setLocale(LocaleContext locale) {
+        this.locale = SingletonLocaleContext.get(locale);
+    }
 
+    public void setRandomService(RandomService randomService) {
+        this.randomService = randomService;
+    }
 }

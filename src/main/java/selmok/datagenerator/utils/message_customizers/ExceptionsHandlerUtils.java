@@ -1,4 +1,4 @@
-package selmok.datagenerator.utils.error_message_adjustments;
+package selmok.datagenerator.utils.message_customizers;
 
 import java.util.List;
 import java.util.stream.Stream;

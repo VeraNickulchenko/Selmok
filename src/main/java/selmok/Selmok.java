@@ -1,15 +1,15 @@
 package selmok;
 
-import selmok.datagenerator.DataGenerator;
-import selmok.webdriver_wrapper.Browser;
+import selmok.datagenerator.Generator;
+import selmok.browser.Browser;
 
 public class Selmok {
     private Browser browser;
-    private DataGenerator dataGenerator;
+    private Generator generator;
 
     public Selmok(SelmokBuilder selmokCompiler) {
         this.browser = selmokCompiler.getBrowser();
-        this.dataGenerator = selmokCompiler.getDataGenerator();
+        this.generator = selmokCompiler.getDataGenerator();
     }
 
     public static SelmokBuilder compiler(){
@@ -20,21 +20,21 @@ public class Selmok {
         return browser;
     }
 
-    public DataGenerator generator() {
-        return dataGenerator;
+    public Generator generator() {
+        return generator;
     }
 
     public static class SelmokBuilder{
         private Browser browser;
-        private DataGenerator dataGenerator;
+        private Generator generator;
 
-        public SelmokBuilder browser(Browser browser){
+        public SelmokBuilder setBrowser(Browser browser){
             this.browser = browser;
             return this;
         }
 
-        public SelmokBuilder generator(DataGenerator generator){
-            this.dataGenerator = generator;
+        public SelmokBuilder setGenerator(Generator generator){
+            this.generator = generator;
             return this;
         }
 
@@ -46,8 +46,8 @@ public class Selmok {
             return browser;
         }
 
-        public DataGenerator getDataGenerator() {
-            return dataGenerator;
+        public Generator getDataGenerator() {
+            return generator;
         }
     }
 }

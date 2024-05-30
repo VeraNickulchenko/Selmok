@@ -1,10 +1,10 @@
-package selmok.webdriver_wrapper.actions;
+package selmok.browser.actions;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import selmok.webdriver_wrapper.waiters.Waiter;
+import selmok.browser.waiters.Waiter;
 
 import java.time.Duration;
 import java.time.temporal.ChronoUnit;
