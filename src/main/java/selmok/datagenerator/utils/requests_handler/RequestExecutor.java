@@ -52,7 +52,7 @@ public class RequestExecutor {
             throws IOException {
         List<HashMap<String, List<String>>> res =  getListOfValuesByRequest(localeContext, request);
         StringBuilder resultValue = new StringBuilder();
-        String valsSeparator = res.size() > 0 ? " " : "";
+        String valsSeparator = res.size() > 1 ? " " : "";
 
         for (HashMap<String, List<String>> fakeValsMap : res) {
             resultValue.append(getFakeValueFromHashMap(fakeValsMap, rand) + valsSeparator);
